@@ -25,16 +25,9 @@
     --muted:rgba(255,255,255,.76);
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-html,body{
-    width:100%;
-    min-height:100%;
-}
+html,body{width:100%;min-height:100%;}
 
 body{
     min-height:100vh;
@@ -42,7 +35,6 @@ body{
     overflow-x:hidden;
     font-family:'Montserrat',Arial,sans-serif;
     color:white;
-
     background:
         radial-gradient(circle at 50% 10%,rgba(54,132,213,.42),transparent 38%),
         radial-gradient(circle at 10% 90%,rgba(19,69,135,.35),transparent 38%),
@@ -67,41 +59,13 @@ body{
     animation:float 12s ease-in-out infinite;
 }
 
-.bokeh:nth-child(1){
-    width:120px;
-    height:120px;
-    top:15%;
-    left:5%;
-}
-
-.bokeh:nth-child(2){
-    width:170px;
-    height:170px;
-    right:5%;
-    top:10%;
-    animation-delay:2s;
-}
-
-.bokeh:nth-child(3){
-    width:90px;
-    height:90px;
-    left:15%;
-    bottom:10%;
-    animation-delay:4s;
-}
-
-.bokeh:nth-child(4){
-    width:130px;
-    height:130px;
-    right:15%;
-    bottom:15%;
-    animation-delay:1s;
-}
+.bokeh:nth-child(1){width:120px;height:120px;top:15%;left:5%;}
+.bokeh:nth-child(2){width:170px;height:170px;right:5%;top:10%;animation-delay:2s;}
+.bokeh:nth-child(3){width:90px;height:90px;left:15%;bottom:10%;animation-delay:4s;}
+.bokeh:nth-child(4){width:130px;height:130px;right:15%;bottom:15%;animation-delay:1s;}
 
 @keyframes float{
-    50%{
-        transform:translate(20px,-25px) scale(1.1);
-    }
+    50%{transform:translate(20px,-25px) scale(1.1);}
 }
 
 /* PARTICULES */
@@ -150,21 +114,13 @@ body{
     align-items:center;
     text-align:center;
     color:#092752;
-
     background:linear-gradient(135deg,#fff,#dceaff);
-
     transition:transform 1.3s cubic-bezier(.77,0,.18,1);
 }
 
-#intro.hide{
-    transform:translateY(-110%);
-}
+#intro.hide{transform:translateY(-110%);}
 
-.intro-small{
-    font-size:10px;
-    letter-spacing:5px;
-    text-transform:uppercase;
-}
+.intro-small{font-size:10px;letter-spacing:5px;text-transform:uppercase;}
 
 .intro-name{
     font-family:'Playfair Display',serif;
@@ -173,18 +129,9 @@ body{
     margin:20px 0;
 }
 
-.intro-line{
-    width:80px;
-    height:1px;
-    margin:auto;
-    background:#b38c39;
-}
+.intro-line{width:80px;height:1px;margin:auto;background:#b38c39;}
 
-.intro-date{
-    margin-top:20px;
-    font-size:10px;
-    letter-spacing:4px;
-}
+.intro-date{margin-top:20px;font-size:10px;letter-spacing:4px;}
 
 /* ENVELOPPE */
 
@@ -197,9 +144,7 @@ body{
     justify-content:center;
     text-align:center;
     padding:20px;
-
     background:radial-gradient(circle,#164f91 0%,#020b1b 85%);
-
     transition:opacity .8s,visibility .8s;
 }
 
@@ -209,18 +154,9 @@ body{
     pointer-events:none;
 }
 
-.envelope-content{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-}
+.envelope-content{display:flex;flex-direction:column;align-items:center;gap:20px;}
 
-.kicker{
-    font-size:9px;
-    letter-spacing:4px;
-    color:var(--ice);
-}
+.kicker{font-size:9px;letter-spacing:4px;color:var(--ice);}
 
 .guest-name{
     font-family:'Playfair Display',serif;
@@ -287,31 +223,13 @@ body{
     transition:transform 1s;
 }
 
-.envelope.open .env-flap{
-    transform:rotateX(180deg);
-}
+.envelope.open .env-flap{transform:rotateX(180deg);}
+.envelope.open .env-card{transform:translateY(-120px);}
 
-.envelope.open .env-card{
-    transform:translateY(-120px);
-}
+.tap{font-size:8px;letter-spacing:3px;color:var(--ice);}
 
-.tap{
-    font-size:8px;
-    letter-spacing:3px;
-    color:var(--ice);
-}
-
-.brand{
-    font-family:'Great Vibes',cursive;
-    font-size:27px;
-    color:var(--gold);
-}
-
-.brand-caption{
-    font-size:8px;
-    letter-spacing:2px;
-    color:#ffffff88;
-}
+.brand{font-family:'Great Vibes',cursive;font-size:27px;color:var(--gold);}
+.brand-caption{font-size:8px;letter-spacing:2px;color:#ffffff88;}
 
 /* APPLICATION */
 
@@ -321,35 +239,24 @@ body{
     min-height:100svh;
     margin:auto;
     padding:15px 10px;
-
     opacity:0;
     visibility:hidden;
     transform:translateY(20px);
-
     transition:opacity .8s,transform .8s,visibility .8s;
 }
 
-#app.visible{
-    opacity:1;
-    visibility:visible;
-    transform:none;
-}
+#app.visible{opacity:1;visibility:visible;transform:none;}
 
 .invitation{
     position:relative;
     width:100%;
     min-height:calc(100svh - 30px);
     padding:38px 30px 75px;
-
     overflow:hidden;
     border-radius:27px;
-
     background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));
-
     border:1px solid rgba(255,255,255,.2);
-
     backdrop-filter:blur(22px);
-
     box-shadow:0 30px 90px #0008;
 }
 
@@ -364,41 +271,26 @@ body{
 
 /* PAGES */
 
-.pages{
-    position:relative;
-    min-height:700px;
-}
+.pages{position:relative;min-height:700px;}
 
 .page{
     position:absolute;
     inset:0;
-
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     text-align:center;
     gap:17px;
-
     padding:10px 4px 25px;
-
     opacity:0;
     visibility:hidden;
-
     transform:translateX(40px);
-
     transition:opacity .5s,transform .6s,visibility .5s;
-
     overflow-y:auto;
 }
 
-.page.active{
-    opacity:1;
-    visibility:visible;
-    transform:none;
-}
-
-/* TEXTES */
+.page.active{opacity:1;visibility:visible;transform:none;}
 
 .eyebrow{
     font-size:9px;
@@ -435,19 +327,8 @@ h2{
     color:var(--muted);
 }
 
-.date{
-    font-family:'Playfair Display',serif;
-    font-size:17px;
-    letter-spacing:2px;
-}
-
-.time{
-    font-size:10px;
-    letter-spacing:4px;
-    color:var(--gold);
-}
-
-/* MONOGRAM */
+.date{font-family:'Playfair Display',serif;font-size:17px;letter-spacing:2px;}
+.time{font-size:10px;letter-spacing:4px;color:var(--gold);}
 
 .monogram{
     width:70px;
@@ -464,12 +345,7 @@ h2{
 
 /* COUNTDOWN */
 
-.countdown{
-    display:flex;
-    justify-content:center;
-    gap:8px;
-    flex-wrap:wrap;
-}
+.countdown{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
 
 .count-box{
     width:60px;
@@ -479,18 +355,8 @@ h2{
     border:1px solid #ffffff25;
 }
 
-.count-box strong{
-    display:block;
-    font-size:19px;
-}
-
-.count-box small{
-    display:block;
-    font-size:7px;
-    margin-top:4px;
-    color:#ffffff99;
-    letter-spacing:1px;
-}
+.count-box strong{display:block;font-size:19px;}
+.count-box small{display:block;font-size:7px;margin-top:4px;color:#ffffff99;letter-spacing:1px;}
 
 /* CARDS */
 
@@ -501,87 +367,39 @@ h2{
     border-radius:18px;
     border:1px solid #ffffff20;
     background:#ffffff0b;
-
     font-family:'Playfair Display',serif;
     font-size:14px;
     line-height:1.9;
     color:var(--muted);
 }
 
-.text-card strong{
-    color:white;
-}
+.text-card strong{color:white;}
 
 /* PROGRAMME */
 
-.schedule{
-    width:100%;
-    max-width:460px;
-    display:flex;
-    flex-direction:column;
-    gap:9px;
-    text-align:left;
-}
+.schedule{width:100%;max-width:460px;display:flex;flex-direction:column;gap:9px;text-align:left;}
 
 .schedule-item{
     display:grid;
     grid-template-columns:105px 1fr;
     gap:10px;
     padding:12px;
-
     border-left:2px solid var(--gold);
     border-radius:0 12px 12px 0;
-
     background:#ffffff0b;
 }
 
-.schedule-item time{
-    font-size:9px;
-    font-weight:700;
-    letter-spacing:1px;
-    color:var(--gold);
-    padding-top:3px;
-}
-
-.schedule-item p{
-    font-family:'Playfair Display',serif;
-    font-size:13px;
-    line-height:1.6;
-    color:var(--muted);
-}
-
-.schedule-item strong{
-    color:white;
-}
+.schedule-item time{font-size:9px;font-weight:700;letter-spacing:1px;color:var(--gold);padding-top:3px;}
+.schedule-item p{font-family:'Playfair Display',serif;font-size:13px;line-height:1.6;color:var(--muted);}
+.schedule-item strong{color:white;}
 
 /* INFORMATIONS */
 
-.info-grid{
-    width:100%;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-}
+.info-grid{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 
-.info-box{
-    padding:15px 10px;
-    border-radius:14px;
-    background:#ffffff0c;
-    border:1px solid #ffffff20;
-}
-
-.info-box strong{
-    display:block;
-    color:var(--gold);
-    font-size:9px;
-    letter-spacing:2px;
-    margin-bottom:7px;
-}
-
-.info-box span{
-    font-family:'Playfair Display',serif;
-    font-size:14px;
-}
+.info-box{padding:15px 10px;border-radius:14px;background:#ffffff0c;border:1px solid #ffffff20;}
+.info-box strong{display:block;color:var(--gold);font-size:9px;letter-spacing:2px;margin-bottom:7px;}
+.info-box span{font-family:'Playfair Display',serif;font-size:14px;}
 
 /* ADRESSE */
 
@@ -591,26 +409,15 @@ h2{
     border-radius:18px;
     border:1px solid #ffffff25;
     background:#ffffff0c;
-
     font-family:'Playfair Display',serif;
     font-size:16px;
     line-height:1.9;
 }
 
-.address strong{
-    color:var(--gold-light);
-    font-size:21px;
-}
+.address strong{color:var(--gold-light);font-size:21px;}
 
-.transport{
-    font-size:12px;
-    line-height:1.9;
-    color:var(--muted);
-}
-
-.transport strong{
-    color:white;
-}
+.transport{font-size:12px;line-height:1.9;color:var(--muted);}
+.transport strong{color:white;}
 
 /* AVERTISSEMENT */
 
@@ -620,27 +427,16 @@ h2{
     border-radius:15px;
     border:1px solid #e8c87390;
     background:#e8c87310;
-
     color:var(--gold-light);
     font-size:12px;
     line-height:1.8;
 }
 
-.notice strong{
-    display:block;
-    margin-bottom:6px;
-    letter-spacing:2px;
-}
+.notice strong{display:block;margin-bottom:6px;letter-spacing:2px;}
 
 /* BOUTONS */
 
-.buttons{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    gap:11px;
-    margin-top:5px;
-}
+.buttons{width:100%;display:flex;flex-direction:column;gap:11px;margin-top:5px;}
 
 .button{
     display:flex;
@@ -649,50 +445,25 @@ h2{
     min-height:47px;
     width:100%;
     padding:12px 16px;
-
     border-radius:30px;
     border:1px solid #e8c87390;
-
     background:linear-gradient(135deg,#e8c873,#fff1ad);
-
     color:#09213f;
     text-decoration:none;
-
     font-family:'Montserrat',sans-serif;
     font-size:9px;
     font-weight:700;
     letter-spacing:1.5px;
     text-transform:uppercase;
-
     cursor:pointer;
     transition:.25s;
 }
 
-.button:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 25px #e8c87325;
-}
+.button:hover{transform:translateY(-2px);box-shadow:0 10px 25px #e8c87325;}
+.button.secondary{color:white;background:#ffffff0b;border-color:#ffffff50;}
+.button.blue{color:white;background:linear-gradient(135deg,#164f91,#061a38);border-color:#5aa7ff;}
 
-.button.secondary{
-    color:white;
-    background:#ffffff0b;
-    border-color:#ffffff50;
-}
-
-.button.blue{
-    color:white;
-    background:linear-gradient(135deg,#164f91,#061a38);
-    border-color:#5aa7ff;
-}
-
-/* SIGNATURE */
-
-.signature{
-    font-family:'Great Vibes',cursive;
-    font-size:26px;
-    color:var(--gold);
-    margin-top:10px;
-}
+.signature{font-family:'Great Vibes',cursive;font-size:26px;color:var(--gold);margin-top:10px;}
 
 /* NAVIGATION */
 
@@ -701,25 +472,41 @@ h2{
     bottom:22px;
     left:0;
     right:0;
-
     display:flex;
     justify-content:center;
     gap:12px;
     z-index:20;
 }
 
-.nav-dot{
-    width:8px;
-    height:8px;
-    border:0;
+.nav-dot{width:8px;height:8px;border:0;border-radius:50%;background:#ffffff45;cursor:pointer;}
+.nav-dot.active{background:var(--gold);transform:scale(1.5);}
+
+/* BOUTON MUSIQUE */
+
+#musicButton{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:1100;
+    width:52px;
+    height:52px;
     border-radius:50%;
-    background:#ffffff45;
+    border:1px solid var(--gold);
+    background:#061a38;
+    color:var(--gold-light);
+    font-size:23px;
     cursor:pointer;
+    box-shadow:0 5px 25px #0008;
+    display:none;
 }
 
-.nav-dot.active{
-    background:var(--gold);
-    transform:scale(1.5);
+#musicButton.visible{display:block;}
+
+#musicButton.playing{animation:musicPulse 2s infinite;}
+
+@keyframes musicPulse{
+    0%,100%{box-shadow:0 0 8px #e8c87330;}
+    50%{box-shadow:0 0 25px #e8c873aa;}
 }
 
 /* CONFETTIS */
@@ -734,78 +521,30 @@ h2{
     animation:fall linear forwards;
 }
 
-@keyframes fall{
-    to{
-        transform:translateY(110vh) rotate(720deg);
-        opacity:0;
-    }
-}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0;}}
 
 /* MOBILE */
 
 @media(max-width:480px){
-
-    #app{
-        padding:8px;
-    }
-
-    .invitation{
-        min-height:calc(100svh - 16px);
-        padding:28px 22px 70px;
-        border-radius:22px;
-    }
-
-    .pages{
-        min-height:720px;
-    }
-
-    .page{
-        gap:13px;
-    }
-
-    .subtitle{
-        font-size:13px;
-    }
-
-    .schedule-item{
-        grid-template-columns:90px 1fr;
-        padding:10px;
-    }
-
-    .schedule-item p{
-        font-size:12px;
-    }
-
-    .count-box{
-        width:53px;
-    }
+    #app{padding:8px;}
+    .invitation{min-height:calc(100svh - 16px);padding:28px 22px 70px;border-radius:22px;}
+    .pages{min-height:720px;}
+    .page{gap:13px;}
+    .subtitle{font-size:13px;}
+    .schedule-item{grid-template-columns:90px 1fr;padding:10px;}
+    .schedule-item p{font-size:12px;}
+    .count-box{width:53px;}
 }
 
 @media(max-height:720px){
-
-    .pages{
-        min-height:620px;
-    }
-
-    .page{
-        gap:10px;
-    }
-
-    .monogram{
-        width:55px;
-        height:55px;
-    }
-
-    .schedule-item{
-        padding:8px;
-    }
+    .pages{min-height:620px;}
+    .page{gap:10px;}
+    .monogram{width:55px;height:55px;}
+    .schedule-item{padding:8px;}
 }
 
 @media(prefers-reduced-motion:reduce){
-    *,*::before,*::after{
-        animation:none!important;
-        transition:none!important;
-    }
+    *,*::before,*::after{animation:none!important;transition:none!important;}
 }
 </style>
 </head>
@@ -848,7 +587,6 @@ h2{
 <!-- ENVELOPPE -->
 
 <div id="envelopeScreen">
-
     <div class="envelope-content">
 
         <div class="kicker">VOUS ÊTES CORDIALEMENT INVITÉ(E)</div>
@@ -857,59 +595,46 @@ h2{
             Cher(e) invité(e)
         </div>
 
-        <div
-            class="envelope"
-            id="envelope"
-            role="button"
-            tabindex="0"
-            aria-label="Ouvrir l'invitation"
-        >
-
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Ouvrir l'invitation">
             <div class="env-body"></div>
-
-            <div class="env-card">
-                <span>LOWEN</span>
-            </div>
-
+            <div class="env-card"><span>LOWEN</span></div>
             <div class="env-flap"></div>
-
         </div>
 
-        <div class="tap">
-            TOUCHEZ L'ENVELOPPE POUR DÉCOUVRIR
-        </div>
+        <div class="tap">TOUCHEZ L'ENVELOPPE POUR DÉCOUVRIR</div>
 
         <div>
             <div class="brand">Elenael Events</div>
-            <div class="brand-caption">
-                L'art de l'événement d'exception
-            </div>
+            <div class="brand-caption">L'art de l'événement d'exception</div>
         </div>
 
     </div>
-
 </div>
+
+<!-- AUDIO -->
+
+<audio id="backgroundMusic" loop preload="auto">
+    <source src="./Lowen.mp3" type="audio/mpeg">
+    Votre navigateur ne prend pas en charge la lecture audio.
+</audio>
+
+<button id="musicButton" aria-label="Activer ou arrêter la musique" title="Musique">
+    ♫
+</button>
 
 <!-- APPLICATION -->
 
 <main id="app">
-
     <div class="invitation">
-
         <div class="pages">
 
-            <!-- PAGE 1 : ACCUEIL -->
+            <!-- PAGE 1 -->
 
             <section class="page active" id="page1">
 
                 <div class="monogram">L</div>
-
-                <div class="eyebrow">
-                    My Special Birthday
-                </div>
-
+                <div class="eyebrow">My Special Birthday</div>
                 <h1>LOWEN</h1>
-
                 <div class="gold-line"></div>
 
                 <p class="subtitle">
@@ -922,314 +647,176 @@ h2{
                     rempli de jeux, de surprises et de gourmandises.
                 </p>
 
-                <div class="date">
-                    SAMEDI 13 FÉVRIER 2027
-                </div>
-
-                <div class="time">
-                    À PARTIR DE 15H30
-                </div>
+                <div class="date">SAMEDI 13 FÉVRIER 2027</div>
+                <div class="time">À PARTIR DE 15H30</div>
 
                 <div class="countdown">
-
-                    <div class="count-box">
-                        <strong id="days">000</strong>
-                        <small>JOURS</small>
-                    </div>
-
-                    <div class="count-box">
-                        <strong id="hours">00</strong>
-                        <small>HEURES</small>
-                    </div>
-
-                    <div class="count-box">
-                        <strong id="minutes">00</strong>
-                        <small>MINUTES</small>
-                    </div>
-
-                    <div class="count-box">
-                        <strong id="seconds">00</strong>
-                        <small>SECONDES</small>
-                    </div>
-
+                    <div class="count-box"><strong id="days">000</strong><small>JOURS</small></div>
+                    <div class="count-box"><strong id="hours">00</strong><small>HEURES</small></div>
+                    <div class="count-box"><strong id="minutes">00</strong><small>MINUTES</small></div>
+                    <div class="count-box"><strong id="seconds">00</strong><small>SECONDES</small></div>
                 </div>
 
                 <div class="info-grid">
-
-                    <div class="info-box">
-                        <strong>DRESS CODE</strong>
-                        <span>Bleu & Bleu</span>
-                    </div>
-
-                    <div class="info-box">
-                        <strong>DESTINATION</strong>
-                        <span>Toulouse</span>
-                    </div>
-
+                    <div class="info-box"><strong>DRESS CODE</strong><span>Bleu & Bleu</span></div>
+                    <div class="info-box"><strong>DESTINATION</strong><span>Toulouse</span></div>
                 </div>
 
-                <div class="signature">
-                    Elenael Events
-                </div>
-
+                <div class="signature">Elenael Events</div>
             </section>
 
-            <!-- PAGE 2 : PROGRAMME -->
+            <!-- PAGE 2 -->
 
             <section class="page" id="page2">
 
                 <div class="eyebrow">Le programme</div>
-
                 <h2>Une journée, mille émotions</h2>
-
                 <div class="gold-line"></div>
 
                 <div class="schedule">
 
                     <div class="schedule-item">
                         <time>15H30 – 18H30</time>
-                        <p>
-                            <strong>Le goûter des enfants</strong><br>
-                            Un super goûter, des jeux et plein
-                            de surprises pour les enfants.
-                        </p>
+                        <p><strong>Le goûter des enfants</strong><br>Un super goûter, des jeux et plein de surprises pour les enfants.</p>
                     </div>
 
                     <div class="schedule-item">
                         <time>19H00 – 20H30</time>
-                        <p>
-                            <strong>Accueil des invités</strong><br>
-                            Installation des invités, boissons
-                            et animation DJ.
-                        </p>
+                        <p><strong>Accueil des invités</strong><br>Installation des invités, boissons et animation DJ.</p>
                     </div>
 
                     <div class="schedule-item">
                         <time>20H45</time>
-                        <p>
-                            <strong>Entrée de LOWEN</strong><br>
-                            Un moment spécial pour célébrer
-                            notre petit héros.
-                        </p>
+                        <p><strong>Entrée de LOWEN</strong><br>Un moment spécial pour célébrer notre petit héros.</p>
                     </div>
 
                     <div class="schedule-item">
                         <time>21H00 – 22H00</time>
-                        <p>
-                            <strong>Le buffet</strong><br>
-                            Place au partage et à la gourmandise.
-                        </p>
+                        <p><strong>Le buffet</strong><br>Place au partage et à la gourmandise.</p>
                     </div>
 
                     <div class="schedule-item">
                         <time>22H00 – 23H00</time>
-                        <p>
-                            <strong>Cadeaux & gâteau</strong><br>
-                            Un moment de joie et de belles attentions.
-                        </p>
+                        <p><strong>Cadeaux & gâteau</strong><br>Un moment de joie et de belles attentions.</p>
                     </div>
 
                     <div class="schedule-item">
                         <time>23H00 – 04H00</time>
-                        <p>
-                            <strong>La fête continue</strong><br>
-                            Animation DJ et boissons à la demande.
-                        </p>
+                        <p><strong>La fête continue</strong><br>Animation DJ et boissons à la demande.</p>
                     </div>
 
                     <div class="schedule-item">
                         <time>06H00</time>
-                        <p>
-                            <strong>Fermeture de la salle</strong>
-                        </p>
+                        <p><strong>Fermeture de la salle</strong></p>
                     </div>
 
                 </div>
 
-                <button class="button" data-page="3">
-                    DÉCOUVRIR LE LIEU
-                </button>
-
+                <button class="button" data-page="3">DÉCOUVRIR LE LIEU</button>
             </section>
 
-            <!-- PAGE 3 : LOCALISATION -->
+            <!-- PAGE 3 -->
 
             <section class="page" id="page3">
 
                 <div class="eyebrow">Le lieu de la célébration</div>
-
                 <h2>Rendez-vous à Toulouse</h2>
-
                 <div class="gold-line"></div>
 
                 <div class="address">
-
                     <strong>Ô KATIKA</strong>
-
                     <br>
-
                     82 route de Bayonne
-
                     <br>
-
                     31300 Toulouse
-
                     <br>
-
                     France
-
                 </div>
 
                 <div class="text-card">
-
                     <div class="eyebrow">ACCÈS EN TRANSPORT</div>
-
                     <p class="transport">
-
                         Bus <strong>L2</strong>
-
                         <br>
-
-                        Direction :
-                        <strong>Colomiers – Lycée International</strong>
-
+                        Direction : <strong>Colomiers – Lycée International</strong>
                         <br>
-
-                        Arrêt :
-                        <strong>Flambère</strong>
-
+                        Arrêt : <strong>Flambère</strong>
                     </p>
-
                 </div>
 
-                <a
-                    class="button blue"
-                    href="https://www.google.com/maps/search/?api=1&query=82+route+de+Bayonne%2C+31300+Toulouse%2C+France"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a class="button blue"
+                   href="https://www.google.com/maps/search/?api=1&query=82+route+de+Bayonne%2C+31300+Toulouse%2C+France"
+                   target="_blank" rel="noopener noreferrer">
                     📍 OUVRIR GOOGLE MAPS
                 </a>
 
-                <button class="button secondary" data-page="4">
-                    VOIR LES CONSIGNES
-                </button>
-
+                <button class="button secondary" data-page="4">VOIR LES CONSIGNES</button>
             </section>
 
-            <!-- PAGE 4 : CONSIGNES -->
+            <!-- PAGE 4 -->
 
             <section class="page" id="page4">
 
                 <div class="eyebrow">Quelques précisions</div>
-
                 <h2>Votre présence compte</h2>
-
                 <div class="gold-line"></div>
 
                 <div class="notice">
-
                     <strong>⚠ INVITATION PERSONNELLE</strong>
-
                     L'invité n'invite pas.
-
                     <br>
-
-                    Merci de respecter le caractère
-                    personnel de cette invitation.
-
+                    Merci de respecter le caractère personnel de cette invitation.
                 </div>
 
                 <div class="text-card">
-
                     <strong>DRESS CODE : BLEU & BLEU</strong>
-
                     <br><br>
-
-                    Merci de respecter le thème vestimentaire
-                    afin de contribuer à l'harmonie
-                    de cette belle célébration.
-
+                    Merci de respecter le thème vestimentaire afin de contribuer à l'harmonie de cette belle célébration.
                     <br><br>
-
                     <strong>RESPECTER L'HEURE SVP !</strong>
-
                     <br><br>
-
-                    Votre ponctualité est importante
-                    pour le bon déroulement du programme.
-
+                    Votre ponctualité est importante pour le bon déroulement du programme.
                 </div>
 
-                <div class="signature">
-                    Merci de célébrer LOWEN avec nous !
-                </div>
+                <div class="signature">Merci de célébrer LOWEN avec nous !</div>
 
-                <button class="button" data-page="5">
-                    CONFIRMATION & LIVRE D'OR
-                </button>
-
+                <button class="button" data-page="5">CONFIRMATION & LIVRE D'OR</button>
             </section>
 
-            <!-- PAGE 5 : WHATSAPP -->
+            <!-- PAGE 5 -->
 
             <section class="page" id="page5">
 
                 <div class="eyebrow">Nous serions heureux de vous compter parmi nous</div>
-
                 <h2>Partagez ce moment avec LOWEN</h2>
-
                 <div class="gold-line"></div>
 
                 <div class="monogram">L</div>
 
                 <div class="text-card">
-
-                    Merci de confirmer votre présence
-                    afin de faciliter l'organisation
-                    de cette belle fête.
-
+                    Merci de confirmer votre présence afin de faciliter l'organisation de cette belle fête.
                     <br><br>
-
-                    Vous pouvez également laisser
-                    un petit mot, un souhait ou
-                    un message spécial à LOWEN.
-
+                    Vous pouvez également laisser un petit mot, un souhait ou un message spécial à LOWEN.
                 </div>
 
                 <div class="buttons">
 
-                    <button
-                        class="button"
-                        id="confirmButton"
-                    >
+                    <button class="button" id="confirmButton">
                         ✓ CONFIRMER MA PRÉSENCE
                     </button>
 
-                    <button
-                        class="button blue"
-                        id="guestbookButton"
-                    >
+                    <button class="button blue" id="guestbookButton">
                         ✉ LAISSER UN MOT DANS LE LIVRE D'OR
                     </button>
 
-                    <button
-                        class="button secondary"
-                        data-page="1"
-                    >
+                    <button class="button secondary" data-page="1">
                         REVOIR L'INVITATION
                     </button>
 
                 </div>
 
-                <div class="signature">
-                    Elenael Events
-                </div>
-
-                <div class="brand-caption">
-                    L'art de l'événement d'exception
-                </div>
-
+                <div class="signature">Elenael Events</div>
+                <div class="brand-caption">L'art de l'événement d'exception</div>
             </section>
 
         </div>
@@ -1237,17 +824,14 @@ h2{
         <!-- NAVIGATION -->
 
         <div class="navigation">
-
             <button class="nav-dot active" data-page="1" aria-label="Page 1"></button>
             <button class="nav-dot" data-page="2" aria-label="Page 2"></button>
             <button class="nav-dot" data-page="3" aria-label="Page 3"></button>
             <button class="nav-dot" data-page="4" aria-label="Page 4"></button>
             <button class="nav-dot" data-page="5" aria-label="Page 5"></button>
-
         </div>
 
     </div>
-
 </main>
 
 <script>
@@ -1259,14 +843,13 @@ h2{
 const WHATSAPP_NUMBER = "33605627115";
 
 const EVENT_DATE_TEXT = "13 février 2027";
-
 const EVENT_TIME_TEXT = "15h30";
 
 const EVENT_ADDRESS =
 "Ô Katika, 82 route de Bayonne, 31300 Toulouse, France";
 
 const EVENT_DATE =
-new Date("2027-02-13T15:30:00");
+new Date("2027-02-13T15:30:00+01:00");
 
 
 /* =========================================
@@ -1275,7 +858,6 @@ new Date("2027-02-13T15:30:00");
 
 let currentPage = 1;
 let envelopeOpened = false;
-
 let touchStartX = 0;
 let touchEndX = 0;
 
@@ -1287,45 +869,94 @@ let touchEndX = 0;
 
 function getGuestName(){
 
-    const params = new URLSearchParams(
-        window.location.search
-    );
-
+    const params = new URLSearchParams(window.location.search);
     let name = params.get("n");
 
     if(!name) return "Cher(e) invité(e)";
 
-    name = String(name)
-        .replace(/_/g," ")
-        .trim();
+    name = String(name).replace(/_/g," ").trim();
 
     return name || "Cher(e) invité(e)";
 }
 
 const guestName = getGuestName();
 
-document.getElementById("guestName").textContent =
-guestName;
+document.getElementById("guestName").textContent = guestName;
 
 
 /* =========================================
    INTRO
 ========================================= */
 
-setTimeout(() => {
+setTimeout(function(){
 
-    document.getElementById("intro")
-        .classList.add("hide");
+    document.getElementById("intro").classList.add("hide");
 
 },1800);
+
+
+/* =========================================
+   MUSIQUE LOWEN
+========================================= */
+
+const music = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("musicButton");
+
+let musicPlaying = false;
+
+music.volume = 0.65;
+
+async function playMusic(){
+
+    try{
+
+        await music.play();
+
+        musicPlaying = true;
+
+        musicButton.textContent = "♫";
+        musicButton.classList.add("playing");
+
+    }catch(error){
+
+        musicPlaying = false;
+
+        musicButton.textContent = "♪";
+        musicButton.classList.remove("playing");
+
+        console.log("Lecture audio impossible :",error);
+
+    }
+
+}
+
+function pauseMusic(){
+
+    music.pause();
+
+    musicPlaying = false;
+
+    musicButton.textContent = "♪";
+    musicButton.classList.remove("playing");
+
+}
+
+musicButton.addEventListener("click",function(){
+
+    if(musicPlaying){
+        pauseMusic();
+    }else{
+        playMusic();
+    }
+
+});
 
 
 /* =========================================
    OUVERTURE ENVELOPPE
 ========================================= */
 
-const envelope =
-document.getElementById("envelope");
+const envelope = document.getElementById("envelope");
 
 envelope.addEventListener("click",openEnvelope);
 
@@ -1334,7 +965,6 @@ envelope.addEventListener("keydown",function(e){
     if(e.key === "Enter" || e.key === " "){
 
         e.preventDefault();
-
         openEnvelope();
 
     }
@@ -1351,13 +981,17 @@ function openEnvelope(){
 
     createConfetti();
 
+    // Le navigateur autorise généralement la lecture
+    // audio après cette interaction de l'utilisateur.
+    playMusic();
+
+    musicButton.classList.add("visible");
+
     setTimeout(function(){
 
-        document.getElementById("envelopeScreen")
-            .classList.add("hidden");
+        document.getElementById("envelopeScreen").classList.add("hidden");
 
-        document.getElementById("app")
-            .classList.add("visible");
+        document.getElementById("app").classList.add("visible");
 
     },1200);
 
@@ -1376,20 +1010,15 @@ function goToPage(number){
 
     if(number === currentPage) return;
 
-    const oldPage =
-    document.getElementById("page" + currentPage);
-
-    const newPage =
-    document.getElementById("page" + number);
+    const oldPage = document.getElementById("page" + currentPage);
+    const newPage = document.getElementById("page" + number);
 
     oldPage.classList.remove("active");
-
     newPage.classList.add("active");
 
     currentPage = number;
 
-    document.querySelectorAll(".nav-dot")
-    .forEach(function(dot){
+    document.querySelectorAll(".nav-dot").forEach(function(dot){
 
         dot.classList.toggle(
             "active",
@@ -1400,11 +1029,7 @@ function goToPage(number){
 
 }
 
-
-/* BOUTONS */
-
-document.querySelectorAll("[data-page]")
-.forEach(function(button){
+document.querySelectorAll("[data-page]").forEach(function(button){
 
     button.addEventListener("click",function(){
 
@@ -1421,28 +1046,20 @@ document.querySelectorAll("[data-page]")
 
 function updateCountdown(){
 
-    let distance =
-    EVENT_DATE.getTime() - Date.now();
+    let distance = EVENT_DATE.getTime() - Date.now();
 
     if(distance < 0) distance = 0;
 
-    const days =
-    Math.floor(distance / 86400000);
-
+    const days = Math.floor(distance / 86400000);
     distance %= 86400000;
 
-    const hours =
-    Math.floor(distance / 3600000);
-
+    const hours = Math.floor(distance / 3600000);
     distance %= 3600000;
 
-    const minutes =
-    Math.floor(distance / 60000);
-
+    const minutes = Math.floor(distance / 60000);
     distance %= 60000;
 
-    const seconds =
-    Math.floor(distance / 1000);
+    const seconds = Math.floor(distance / 1000);
 
     document.getElementById("days").textContent =
     String(days).padStart(3,"0");
@@ -1475,11 +1092,7 @@ function openWhatsApp(message){
     "?text=" +
     encodeURIComponent(message);
 
-    window.open(
-        url,
-        "_blank",
-        "noopener,noreferrer"
-    );
+    window.open(url,"_blank");
 
 }
 
@@ -1560,13 +1173,11 @@ function createConfetti(){
 
     for(let i=0;i<65;i++){
 
-        const piece =
-        document.createElement("div");
+        const piece = document.createElement("div");
 
         piece.className = "confetti";
 
-        piece.style.left =
-        Math.random()*100 + "%";
+        piece.style.left = Math.random()*100 + "%";
 
         piece.style.background =
         colors[Math.floor(Math.random()*colors.length)];
@@ -1597,8 +1208,7 @@ function createConfetti(){
    SWIPE MOBILE
 ========================================= */
 
-const invitation =
-document.querySelector(".invitation");
+const invitation = document.querySelector(".invitation");
 
 invitation.addEventListener("touchstart",function(e){
 
@@ -1611,8 +1221,7 @@ invitation.addEventListener("touchend",function(e){
 
     touchEndX = e.changedTouches[0].screenX;
 
-    const difference =
-    touchEndX - touchStartX;
+    const difference = touchEndX - touchStartX;
 
     if(Math.abs(difference) < 60) return;
 
